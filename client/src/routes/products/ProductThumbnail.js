@@ -19,7 +19,7 @@ export class ProductThumbnail extends React.Component {
     const formattedQuery = query.replace(/\s/g, '_');
     const { image, errors } = await fetch(`${workspace}/webhook/${formattedQuery}/get-product-image`).then(res => res.json());
 
-    if (errors.length) {
+    if (errors) {
       this.setState({ errors });
     } 
     else {
