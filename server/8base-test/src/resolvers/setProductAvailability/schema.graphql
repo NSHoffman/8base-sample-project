@@ -1,0 +1,7 @@
+type SetProductAvailabilityResult {
+  success: Boolean!
+}
+
+extend type Mutation {
+  setProductAvailability(id: ID!, status: String!): SetProductAvailabilityResult
+}

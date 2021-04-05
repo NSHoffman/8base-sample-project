@@ -1,0 +1,25 @@
+functions:
+  orderProducts:
+    type: trigger.before
+    handler:
+      code: src/triggers/orderProducts/handler.ts
+    operation: Orders.create
+  addProducts:
+    type: task
+    handler:
+      code: src/tasks/addProducts/handler.ts
+    schedule: cron(00 * * * ? *)
+  setProductAvailability:
+    type: resolver
+    handler:
+      code: src/resolvers/setProductAvailability/handler.ts
+    schema: src/resolvers/setProductAvailability/schema.graphql
+  getProductImage:
+    type: webhook
+    handler:
+      code: src/webhooks/getProductImage/handler.ts
+    path: '{query}/get-product-image'
+    method: GET
+plugins:
+  - name: invitations
+    path: plugins/invitations/8base.yml
