@@ -16,9 +16,7 @@ declare module '@8base/boost' {
 
   export function useModal(id?: string): ModalContextTypeFlat;
 
-  export type ReactComponent<P = {}, S = {}> = React.ComponentClass<P, S> | React.FC<P>;
-
-  export type ActionDialog<P = {}, S = {}> = ReactComponent<P, S> & { id: string };
+  export type ActionDialog<P = {}> = React.ComponentType<P> & { id: string };
 
   export interface ModalProps {
     openModal(id: string, args = {}): void;

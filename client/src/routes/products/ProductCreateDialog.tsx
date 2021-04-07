@@ -37,7 +37,7 @@ export const ProductCreateDialog: ActionDialog = () => {
       <Dialog.Body scrollable>
         <Grid.Layout gap="sm" stretch>
           <Grid.Box>
-            <Field name="image" label="Image" component={ FileInputField } maxFiles={ 1 } public={ true } />
+            <Field name="image" label="Image" component={ FileInputField as React.FC } maxFiles={ 1 } public={ true } />
           </Grid.Box>
           <Grid.Box>
             <Field name="title" label="Title" type="text" component={ InputField } />
