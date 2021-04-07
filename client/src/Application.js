@@ -5,8 +5,8 @@ import { Auth, AUTH_STRATEGIES } from '@8base/auth';
 import { BoostProvider, AsyncContent } from '@8base/boost';
 import { ToastContainer, toast } from 'react-toastify';
 
-import { ProtectedRoute } from 'shared/components';
-import { TOAST_SUCCESS_MESSAGE } from 'shared/constants';
+import { ProtectedRoute } from './shared/components';
+import { TOAST_SUCCESS_MESSAGE } from './shared/constants';
 
 import { MainPlate, ContentPlate, Nav } from './components';
 import { Auth as AuthCallback } from './routes/auth';
@@ -14,21 +14,20 @@ import { Customers } from './routes/customers';
 import { Products } from './routes/products';
 import { Orders } from './routes/orders';
 
-const { 
-  REACT_APP_AUTH0_CLIENT_ID, 
-  REACT_APP_AUTH0_DOMAIN, 
-  REACT_APP_8BASE_API_ENDPOINT 
-} = process.env;
+const { REACT_APP_AUTH0_CLIENT_ID, REACT_APP_AUTH0_DOMAIN, REACT_APP_8BASE_API_ENDPOINT } = process.env;
 
-const authClient = Auth.createClient({
-  strategy: AUTH_STRATEGIES.WEB_AUTH0,
-  subscribable: true,
-}, {
-  clientId: REACT_APP_AUTH0_CLIENT_ID,
-  domain: REACT_APP_AUTH0_DOMAIN,
-  redirectUri: `${window.location.origin}/auth/callback`,
-  logoutRedirectUri: `${window.location.origin}/auth`,
-});
+const authClient = Auth.createClient(
+  {
+    strategy: AUTH_STRATEGIES.WEB_AUTH0,
+    subscribable: true,
+  },
+  {
+    clientId: REACT_APP_AUTH0_CLIENT_ID,
+    domain: REACT_APP_AUTH0_DOMAIN,
+    redirectUri: `${window.location.origin}/auth/callback`,
+    logoutRedirectUri: `${window.location.origin}/auth`,
+  }
+);
 
 class Application extends React.PureComponent {
   renderContent = ({ loading }) => (

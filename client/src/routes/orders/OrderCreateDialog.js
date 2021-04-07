@@ -15,6 +15,14 @@ const getUserOptions = (users = []) =>
   }));
 
 const ORDER_CREATE_DIALOG_ID = 'ORDER_CREATE_DIALOG_ID';
+const AVAILABLE_PRODUCTS_FILTER = {
+  status: {
+    equals: 'Available',
+  },
+  quantity: {
+    not_equals: 0,
+  },
+};
 
 class OrderCreateDialog extends React.Component {
   static contextType = ModalContext;
@@ -35,7 +43,12 @@ class OrderCreateDialog extends React.Component {
       <Dialog.Body scrollable>
         <Grid.Layout gap="sm" stretch>
           <Grid.Box>
-            <Query query={sharedGraphQL.PRODUCTS_AVAILABLE_LIST_QUERY}>
+            <Query
+              query={sharedGraphQL.PRODUCTS_LIST_QUERY}
+              variables={{
+                filter: AVAILABLE_PRODUCTS_FILTER,
+              }}
+            >
               {({ data, loading }) => (
                 <Field
                   name="product"

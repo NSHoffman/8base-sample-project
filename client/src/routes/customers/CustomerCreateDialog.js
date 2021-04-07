@@ -3,8 +3,8 @@ import { Form, Field } from '@8base/forms';
 import { Dialog, Grid, Button, SelectField, ModalContext } from '@8base/boost';
 import { Query, graphql } from 'react-apollo';
 
-import * as sharedGraphQL from 'shared/graphql';
-import { TOAST_SUCCESS_MESSAGE } from 'shared/constants';
+import * as sharedGraphQL from '../../shared/graphql';
+import { TOAST_SUCCESS_MESSAGE } from '../../shared/constants';
 
 const CUSTOMER_CREATE_DIALOG_ID = 'CUSTOMER_CREATE_DIALOG_ID';
 

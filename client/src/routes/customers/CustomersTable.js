@@ -4,7 +4,7 @@ import * as R from 'ramda';
 import { Table, Dropdown, Icon, Menu, withModal } from '@8base/boost';
 import { graphql } from 'react-apollo';
 
-import * as sharedGraphQL from 'shared/graphql';
+import * as sharedGraphQL from '../../shared/graphql';
 
 import { CustomerCreateDialog } from './CustomerCreateDialog';
 import { CustomerDeleteDialog } from './CustomerDeleteDialog';

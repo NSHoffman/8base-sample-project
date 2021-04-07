@@ -90,30 +90,8 @@ export const ORDERS_LIST_QUERY = gql`
 `;
 
 export const PRODUCTS_LIST_QUERY = gql`
-  query ProductsList {
-    productsList {
-      items {
-        id
-        image {
-          downloadUrl
-        }
-        title
-        price
-        quantity
-        status
-      }
-    }
-  }
-`;
-
-export const PRODUCTS_AVAILABLE_LIST_QUERY = gql`
-  query ProductsList {
-    productsList(filter: {
-      AND: [
-        { quantity: { not_equals: 0 }},
-        { status: { not_equals: "Out of stock" }},
-      ]
-    }) {
+  query ProductsList($filter: ProductFilter) {
+    productsList(filter: $filter) {
       items {
         id
         image {

@@ -1,0 +1,7 @@
+overwrite: true
+schema: "https://api.8base.com/ckmxps85u02d907l4g5364rq1"
+documents: "src/shared/graphql/index.ts"
+generates:
+  src/shared/types/generated/graphql.ts:
+    plugins:
+      - "typescript"

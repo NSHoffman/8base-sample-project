@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Grid } from '@8base/boost';
 
 import { UserDropdown } from './UserDropdown.js';
-import logo from 'images/8base-logo-red-black.svg';
+import logo from '../images/8base-logo-red-black.svg';
 
 const HeaderTag = styled(Grid.Layout)({
   height: '6rem',

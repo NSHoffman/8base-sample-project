@@ -3,8 +3,8 @@ import { Form } from '@8base/forms';
 import { Dialog, Button, ModalContext } from '@8base/boost';
 import { graphql } from 'react-apollo';
 
-import * as sharedGraphQL from 'shared/graphql';
-import { TOAST_SUCCESS_MESSAGE } from 'shared/constants';
+import * as sharedGraphQL from '../../shared/graphql';
+import { TOAST_SUCCESS_MESSAGE } from '../../shared/constants';
 
 const CUSTOMER_DELETE_DIALOG_ID = 'CUSTOMER_DELETE_DIALOG_ID';
 
