@@ -9,13 +9,14 @@ import { ProductThumbnail } from './ProductThumbnail';
 import { ProductCreateDialog } from './ProductCreateDialog';
 import { ProductDeleteDialog } from './ProductDeleteDialog';
 import { ProductUpdateDialog } from './ProductUpdateDialog';
+import { EMPTY_ARRAY } from '../../shared/constants';
 
 
 export const ProductsTable = () => {
   const { openModal } = useModal();
 
   const { data, loading } = useQuery<ProductsList>(PRODUCTS_LIST_QUERY);
-  const products = data ? data.productsList.items : [];
+  const products = data ? data.productsList.items : EMPTY_ARRAY;
 
   return (
     <Table>

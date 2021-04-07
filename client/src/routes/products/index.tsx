@@ -6,7 +6,7 @@ import { ProductUpdateDialog } from './ProductUpdateDialog';
 import { ProductDeleteDialog } from './ProductDeleteDialog';
 import { ProductsTable } from './ProductsTable';
 
-const Products = () => (
+export const Products = () => (
   <Card padding="md" stretch>
     <Card.Header>
       <Heading type="h4" text="Products" />
@@ -21,5 +21,3 @@ const Products = () => (
     </Card.Body>
   </Card>
 );
-
-export { Products };

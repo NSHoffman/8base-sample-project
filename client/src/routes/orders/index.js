@@ -5,7 +5,7 @@ import { OrderCreateDialog } from './OrderCreateDialog';
 import { OrderDeleteDialog } from './OrderDeleteDialog';
 import { OrdersTable } from './OrdersTable';
 
-const Orders = () => (
+export const Orders = () => (
   <Card padding="md" stretch>
     <Card.Header>
       <Heading type="h4" text="Orders" />
@@ -19,5 +19,3 @@ const Orders = () => (
     </Card.Body>
   </Card>
 );
-
-export { Orders };

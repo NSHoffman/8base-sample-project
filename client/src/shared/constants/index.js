@@ -1,1 +1,2 @@
 export const TOAST_SUCCESS_MESSAGE = 'TOAST_SUCCESS_MESSAGE';
+export const EMPTY_ARRAY = [];
