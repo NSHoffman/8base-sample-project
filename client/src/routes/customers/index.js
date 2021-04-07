@@ -5,7 +5,7 @@ import { CustomerCreateDialog } from './CustomerCreateDialog';
 import { CustomerDeleteDialog } from './CustomerDeleteDialog';
 import { CustomersTable } from './CustomersTable';
 
-const Customers = () => (
+export const Customers = () => (
   <Card padding="md" stretch>
     <Card.Header>
       <Heading type="h4" text="Customers" />
@@ -19,5 +19,3 @@ const Customers = () => (
     </Card.Body>
   </Card>
 );
-
-export { Customers };

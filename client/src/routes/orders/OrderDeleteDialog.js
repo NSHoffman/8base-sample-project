@@ -24,7 +24,7 @@ export const OrderDeleteDialog = () => {
     closeModal(ORDER_DELETE_DIALOG_ID);
   }
 
-  const onClose = () =>  closeModal(ORDER_DELETE_DIALOG_ID);
+  const onClose = () => closeModal(ORDER_DELETE_DIALOG_ID);
 
   const renderFormContent = ({ handleSubmit, invalid, submitting }) => (
     <form onSubmit={handleSubmit}>
